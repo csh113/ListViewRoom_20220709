@@ -1,6 +1,7 @@
 package com.cshka.listviewtest_20220709.adapters
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -54,28 +55,37 @@ class RoomListAdapter(
             pricePrevVal = priceVal / 10000
             priceRemVal = priceVal % 10000
 
-            priceTxt.text = pricePrevVal.toString() + " " + dec.format(priceRemVal)
+            priceTxt.text = "${pricePrevVal} 억 ${dec.format(priceRemVal)}"
         }
 
-        addressTxt.text = mList[position].address
+//        RoomData의 getFormattedPrice 함수 활용 가격 표시
+//            priceTxt.text = mList[position].getFormattedPrice()
+            addressTxt.text = mList[position].address
 
 //        층수 표시
         var level : Int = mList[position].level
         var levelVal : String
 
         if( level > 0 ) {
-            levelVal = level.toString()
+            levelVal = ", ${level.toString()} 층"
         }
         else if (level == 0 ) {
-            levelVal = "반지하"
+            levelVal = ", 반지하"
         }
         else if ( level < 0 ) {
-            levelVal = "지하" +  level.toString()
+            level = level * -1
+            levelVal = ", 지하 ${level.toString()} 층"
         }
-        else {  levelVal = "알 수 없는"
+        else {  levelVal = ", 알 수 없는 층"
         }
 
-        levelTxt.text = levelVal
+
+        val TAG:String = "MainActivity : "
+
+        Log.d(TAG, "메시지 : " + levelVal)
+
+//        levelTxt.text = levelVal
+        levelTxt.text = mList[position].getFormttedLevel()
         descriptionTxt.text = mList[position].description
 
         return row
