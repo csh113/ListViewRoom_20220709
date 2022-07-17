@@ -1,4 +1,4 @@
-package com.cshka.listviewtest_20220709.adapters
+package com.cshka.listviewroom_20220709.adapters
 
 import android.content.Context
 import android.util.Log
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.cshka.listviewtest_20220709.R
-import com.cshka.listviewtest_20220709.RoomData
+import com.cshka.listviewroom_20220709.R
+import com.cshka.listviewroom_20220709.RoomData
 import java.text.DecimalFormat
 
 class RoomListAdapter(

@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ListViewTest_20220709"
+rootProject.name = "ListViewRoom_20220709"
 include ':app'

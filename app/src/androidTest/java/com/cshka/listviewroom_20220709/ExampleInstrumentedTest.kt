@@ -1,4 +1,4 @@
-package com.cshka.listviewtest_20220709
+package com.cshka.listviewroom_20220709
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.cshka.listviewtest_20220709", appContext.packageName)
+        assertEquals("com.cshka.listviewroom_20220709", appContext.packageName)
     }
 }
